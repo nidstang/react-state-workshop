@@ -28,6 +28,7 @@ export default class extends React.Component {
             increment={this.increment.bind(this)}
             reset={this.reset.bind(this)}
             decrement={this.decrement.bind(this)}
+            value={this.state.count}
         />;
     }
 };
