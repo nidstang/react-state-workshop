@@ -1,13 +1,19 @@
 import React from 'react';
 
-const dec = count => count - 1;
-
 export default (props) => {
 
     const [count, setCount] = React.useState(0);
 
-    const increment = () => setCount(c => c + 1);
-    const decrement = () => setCount(dec);
+    const increment = () =>  {
+        setCount(count + 1);
+        setCount(count + 1);
+        setCount(count + 1);
+    };
+    const decrement = () => {
+        setCount(c => c - 1);
+        setCount(c => c - 1);
+        setCount(c => c - 1);
+    }
     const reset = () => setCount(0);
 
     return (
