@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 
-import Todos from './components/Todos';
-import CreateTodo from './components/CreateTodo';
-import id from './libs/id';
+import Todos from '../components/Todos';
+import CreateTodo from '../components/CreateTodo';
+import id from '../libs/id';
 
 const ids = id();
 

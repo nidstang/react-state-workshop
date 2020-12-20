@@ -1,13 +1,15 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
-import TodosApp from './TodosApp';
+import FetchState from './examples/datafetching/managing-fetch-states';
+// import UseFetch from './examples/datafetching/useFetch';
+import UseFetchReducer from './examples/datafetching/reducer-useFetch';
+// import TodosApp from './apps/TodosApp';
 import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
   <React.StrictMode>
-    <TodosApp />
+    <UseFetchReducer />
   </React.StrictMode>,
   document.getElementById('root')
 );
