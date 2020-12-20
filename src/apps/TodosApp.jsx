@@ -4,6 +4,7 @@ import Todos from '../components/Todos';
 import CreateTodo from '../components/CreateTodo';
 import ids from '../libs/id';
 import initialState from '../fixtures/todos';
+import '../styles/todosApp.css';
 
 export default () => {
     const [todos, setTodos] = useState(initialState());
@@ -31,7 +32,7 @@ export default () => {
     };
 
     return (
-        <div>
+        <div class="container">
             <CreateTodo onSubmit={addTodo} />
             <Todos todos={todos} onToggle={toggleTodo} />
         </div>

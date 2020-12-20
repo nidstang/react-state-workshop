@@ -11,6 +11,7 @@ const Todo = ({ info, onToggle }) => {
                     Toggle
                 </label>
             </div>
+            <hr />
         </div>
     );
 };
