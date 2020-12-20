@@ -4,12 +4,12 @@ import './index.css';
 import FetchState from './examples/datafetching/managing-fetch-states';
 // import UseFetch from './examples/datafetching/useFetch';
 import UseFetchReducer from './examples/datafetching/reducer-useFetch';
-// import TodosApp from './apps/TodosApp';
+import TodosApp from './apps/TodosApp';
 import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
   <React.StrictMode>
-    <UseFetchReducer />
+    <TodosApp />
   </React.StrictMode>,
   document.getElementById('root')
 );

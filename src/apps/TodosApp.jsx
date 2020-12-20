@@ -2,12 +2,11 @@ import React, { useState } from 'react';
 
 import Todos from '../components/Todos';
 import CreateTodo from '../components/CreateTodo';
-import id from '../libs/id';
-
-const ids = id();
+import ids from '../libs/id';
+import initialState from '../fixtures/todos';
 
 export default () => {
-    const [todos, setTodos] = useState([]);
+    const [todos, setTodos] = useState(initialState());
 
     const addTodo = todo => {
         Object.assign(todo, {
