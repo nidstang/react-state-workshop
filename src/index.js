@@ -5,12 +5,15 @@ import FetchState from './examples/datafetching/managing-fetch-states';
 import CounterApp from './apps/CounterApp';
 // import UseFetch from './examples/datafetching/useFetch';
 import UseFetchReducer from './examples/datafetching/reducer-useFetch';
+import LocalStorage from './practices/localStorage-solution';
+import LocalStorageHook from './practices/localStorage-hook-effect-solution';
+import LocalStorageCustomHook from './practices/localStorage-custom-hook-solution';
 // import TodosApp from './apps/TodosApp';
 import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
   <React.StrictMode>
-    <CounterApp />
+    <LocalStorageHook />
   </React.StrictMode>,
   document.getElementById('root')
 );
