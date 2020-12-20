@@ -6,10 +6,14 @@ export default ({
     decrement = () => null,
     reset = () => null,
 }) => (
-    <div>
-        <span>{value}</span>
-        <button onClick={increment}>Increment</button>
-        <button onClick={decrement}>Increment</button>
-        <button onClick={reset}>Increment</button>
+    <div class="container">
+        <section class="counter">
+            <span>{value}</span>
+        </section>
+        <section class="buttons">
+            <button onClick={increment}>Increment</button>
+            <button onClick={decrement}>Descrement</button>
+            <button onClick={reset}>Reset</button>
+        </section>
     </div>
 );
