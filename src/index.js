@@ -6,14 +6,14 @@ import LocalStorage from './practices/localStorage-custom-hook';
 import './index.css';
 import './styles/counterApp.css';
 // import TodosApp from './apps/TodosApp';
+import Home from './apps/Home';
 import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
   <React.StrictMode>
-    {/* <TodosApp /> */}
     <BrowserRouter>
       <Switch>
-        { routes.map(props => <Route {...props} />) }
+        <Route path="/" exact component={Home} />
       </Switch>
     </BrowserRouter>
   </React.StrictMode>,

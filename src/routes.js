@@ -20,6 +20,7 @@ import BasicFetch from './examples/datafetching/basic-fetch';
 import ManagingFetchStates from './examples/datafetching/managing-fetch-states';
 import UseFetch from './examples/datafetching/useFetch';
 import ReducerUserFetch from './examples/datafetching/reducer-useFetch';
+import TodosApp from './apps/TodosApp';
 
 const classesAndHooksBasePath = '/classes-hooks/';
 const dataFetching = '/datafetching/';
@@ -55,7 +56,7 @@ export default [
     RouteBasic({ component: SetStateWithCallback }),
     RouteBasic({ component: UseStateBasic }),
     RouteBasic({ component: UseStateWithFunction }),
-    RouteBasic({ component: UseStateWithFunctionValidation }),
+    RouteBasic({ c0omponent: UseStateWithFunctionValidation }),
     RouteBasic({ component: UseStateAsync }),
     RouteBasic({ component: UseEffectBasic }),
     RouteBasic({ component: UseEffectAdvanced }),
@@ -66,6 +67,7 @@ export default [
     RouteAdvanced({ component: ManagingFetchStates }),
     RouteAdvanced({ component: UseFetch }),
     RouteAdvanced({ component: ReducerUserFetch }),
+    Route({ path: '/todosapp', component: TodosApp }),
 ];
 // .map(r => {
 //     console.log(r);
