@@ -1,9 +1,10 @@
 import React, { useState } from 'react';
 
-const CreateTodo = ({ onSubmit }) => {
+const CreateTodo = React.memo(({ onSubmit }) => {
     const [title, setTitle] = useState('');
     const [description, setDescription] = useState('');
 
+    console.log('Creating new todo');
     const handleSubmit = ev => {
         ev.preventDefault();
         onSubmit({ title, description });
@@ -29,6 +30,6 @@ const CreateTodo = ({ onSubmit }) => {
             </form>
         </section>
     );
-};
+});
 
 export default CreateTodo;

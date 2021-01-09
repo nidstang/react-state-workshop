@@ -1,5 +1,6 @@
 import React from 'react';
 import * as R from 'ramda';
+import Counter from '../../components/counter';
 
 const useCounter = ([value, setValue]) => { // usecounter = (initialState) with useState inside
     const increment = () => setValue(v => v + 1);

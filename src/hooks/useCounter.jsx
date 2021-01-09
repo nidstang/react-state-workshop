@@ -1,9 +1,9 @@
 import React from 'react';
 
 export default (initialState) => {
-    const [value, setValue] = React.useState(initialState);
+    const [count, setCount] = React.useState(initialState);
 
-    const increment = () => setValue(value + 1);
+    const increment = React.useCallback(() => setCount(count + 1), []);
 
-    return [value, increment];
-}
+    return { count, increment };
+};

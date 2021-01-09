@@ -1,4 +1,5 @@
 import React from 'react';
+import Counter from '../../components/counter';
 
 const dec = props => count => {
     if (count <= props.min) return; // no funciona (para que funcine return count;)

@@ -1,19 +1,21 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { Switch, BrowserRouter, Route } from 'react-router-dom';
+import routes from './routes';
+import LocalStorage from './practices/localStorage-custom-hook';
 import './index.css';
-import FetchState from './examples/datafetching/managing-fetch-states';
-import CounterApp from './apps/CounterApp';
-// import UseFetch from './examples/datafetching/useFetch';
-import UseFetchReducer from './examples/datafetching/reducer-useFetch';
-import LocalStorage from './practices/localStorage-solution';
-import LocalStorageHook from './practices/localStorage-hook-effect-solution';
-import LocalStorageCustomHook from './practices/localStorage-custom-hook-solution';
+import './styles/counterApp.css';
 // import TodosApp from './apps/TodosApp';
 import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
   <React.StrictMode>
-    <LocalStorageHook />
+    {/* <TodosApp /> */}
+    <BrowserRouter>
+      <Switch>
+        { routes.map(props => <Route {...props} />) }
+      </Switch>
+    </BrowserRouter>
   </React.StrictMode>,
   document.getElementById('root')
 );

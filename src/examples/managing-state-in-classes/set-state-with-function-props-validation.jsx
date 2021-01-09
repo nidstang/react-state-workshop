@@ -2,7 +2,7 @@ import React from 'react';
 import Counter from '../../components/counter';
 
 const decrement = (state, { min }) => {
-    if (count <= min) return;
+    if (state.count <= min) return;
     return { count: state.count - 1};
 };
 
@@ -17,7 +17,7 @@ export default class extends React.Component {
 
     increment() {
         this.setState((state, props) => {
-            if (count >= props.max) return;
+            if (state.count >= props.max) return;
             return { count: state.count + 1 };
         });
     }

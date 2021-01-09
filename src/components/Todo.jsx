@@ -1,6 +1,8 @@
 import React from 'react';
 
-const Todo = ({ info, onToggle }) => {
+const Todo = React.memo(({ info, onToggle }) => {
+    console.log('Todo', info.id);
+
     return (
         <div>
             <h2>{info.title}</h2>
@@ -14,7 +16,7 @@ const Todo = ({ info, onToggle }) => {
             <hr />
         </div>
     );
-};
+});
 
 const toTodo = onToggle => todo => (
     <Todo onToggle={onToggle} key={todo.id} info={todo} />

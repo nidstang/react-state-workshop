@@ -4,17 +4,19 @@ import Storage from '../libs/storage';
 
 const vault = Storage({ name: 'counter' });
 
+const initialState = vault.get();
+
 export default (props) => {
 
-    const [count, setCount] = React.useState(0);
+    const [count, setCount] = React.useState(initialState ? initialState.count : 0);
 
     const increment = () => setCount(count + 1);
     const decrement = () => setCount(count - 1);
     const reset = () => setCount(0);
 
     React.useEffect(() => {
-        // este effect se ejecuta en cada render
-    }); 
+        vault.save({ count });
+    }, [count]);
 
     return (
         <>
@@ -24,7 +26,7 @@ export default (props) => {
                 reset={reset}
                 decrement={decrement}
             />
-            <p>Local Storage hook effect</p>
+            <p>Local Storage hook effect practica</p>
         </>
     );
 };

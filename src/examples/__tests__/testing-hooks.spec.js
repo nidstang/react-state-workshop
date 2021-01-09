@@ -1,13 +1,12 @@
 import { renderHook, act } from '@testing-library/react-hooks';
 import useCounter from '../../hooks/useCounter';
 
+test('useCounter should increment count', () => {
+  const { result } = renderHook(() => useCounter(0));
 
-test('should increment counter', () => {
-    const { result } = renderHook(() => useCounter())
-  
-    act(() => {
-      result.current.increment()
-    })
-  
-    expect(result.current.count).toBe(1)
+  act(() => {
+    result.current.increment();
+  });
+
+  expect(result.current.count).toBe(1);
 });
