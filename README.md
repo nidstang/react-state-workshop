@@ -1,70 +1,80 @@
-# Getting Started with Create React App
+# Cursos de manejo de estado en React
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Este es el repositorio de código de los cursos de manejo de estado en React. Aquí encontraras todos los ejemplos desarrollados durante el curso, así como los ejercicios.
 
-## Available Scripts
 
-In the project directory, you can run:
 
-### `yarn start`
+El repositorio contiene los ejemplos de los dos cursos. A continuación se listan todos los ficheros relevantes en cada sección.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
 
-### `yarn test`
+## Manejo de estado con Clases y Hooks
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+##### Ejemplos
 
-### `yarn build`
+1. [Ejemplo básico con this.setState](https://github.com/nidstang/react-state-workshop/blob/main/src/examples/managing-state-in-classes/basic-set-state.jsx)
+2. [Ejemplo de this.setState con una función](https://github.com/nidstang/react-state-workshop/blob/main/src/examples/managing-state-in-classes/set-state-with-function.jsx)
+3. [Ejemplo de this.setState con función y validación](https://github.com/nidstang/react-state-workshop/blob/main/src/examples/managing-state-in-classes/set-state-with-function-and-validation.jsx)
+4. [Ejemplo de this.setState con función y validación con props](https://github.com/nidstang/react-state-workshop/blob/main/src/examples/managing-state-in-classes/set-state-with-function-and-validation.jsx)
+5. [Ejemplo de asincronía de this.setState](https://github.com/nidstang/react-state-workshop/blob/main/src/examples/managing-state-in-classes/set-state-async.jsx)
+6. [Ejemplo de asincronía de this.setState con una función](https://github.com/nidstang/react-state-workshop/blob/main/src/examples/managing-state-in-classes/set-state-with-function-async.jsx)
+7. [Ejemplo de this.setState con after callback](https://github.com/nidstang/react-state-workshop/blob/main/src/examples/managing-state-in-classes/set-state-with-callback.jsx)
+8. [Ejemplo básico de useState (refactor clase a función)](https://github.com/nidstang/react-state-workshop/blob/main/src/examples/managing-state-in-function/refactor-class-to-function.jsx)
+9. [Ejemplo básico de useState con función](https://github.com/nidstang/react-state-workshop/blob/main/src/examples/managing-state-in-function/useState-with-function.jsx)
+10. [Ejemplo de useState con función y validación](https://github.com/nidstang/react-state-workshop/blob/main/src/examples/managing-state-in-function/useState-with-function-and-validation.jsx)
+11. [Ejemplo de asincronía de useState](https://github.com/nidstang/react-state-workshop/blob/main/src/examples/managing-state-in-function/useState-async.jsx)
+12. [Ejemplo básico de useEffect](https://github.com/nidstang/react-state-workshop/blob/main/src/examples/managing-state-in-function/basic-useEffect.jsx)
+13. [Ejemplo de dependencias de useEffect](https://github.com/nidstang/react-state-workshop/blob/main/src/examples/managing-state-in-function/advanced-useEffect.jsx)
+14. [Ejemplo de custom hooks](https://github.com/nidstang/react-state-workshop/blob/main/src/examples/managing-state-in-function/custom-hook.jsx)
+15. [Ejemplo de useRef](https://github.com/nidstang/react-state-workshop/blob/main/src/examples/managing-state-in-function/useRef.jsx)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+##### Ejercicios
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+1. [Ejercicio de LocalStorage sobre clases](https://github.com/nidstang/react-state-workshop/blob/main/src/practices/localStorage.jsx)
+2. [Ejercicio de LocalStorage sobre clases (solución)](https://github.com/nidstang/react-state-workshop/blob/main/src/practices/localStorage-solution.jsx)
+3. [Ejercicio de LocalStorage con hooks](https://github.com/nidstang/react-state-workshop/blob/main/src/practices/localStorage-hook-effect.jsx)
+4. [Ejercicio de LocalStorage con hooks (solución)](https://github.com/nidstang/react-state-workshop/blob/main/src/practices/localStorage-hook-effect-solution.jsx)
+5. [Ejercicio de LocalStorage con custom hooks](https://github.com/nidstang/react-state-workshop/blob/main/src/practices/localStorage-custom-hook.jsx)
+6. [Ejercicio de LocalStorage con custom hooks (solución)](https://github.com/nidstang/react-state-workshop/blob/main/src/practices/localStorage-custom-hook-solution.jsx)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `yarn eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+# Manejo de estado con Reducers y Data Fetching
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+##### Ejemplos
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+1. [Ejemplo básico de fetch](https://github.com/nidstang/react-state-workshop/blob/main/src/examples/datafetching/basic-fetch.jsx)
+2. [Ejemplo manejando estados de fetch](https://github.com/nidstang/react-state-workshop/blob/main/src/examples/datafetching/managing-fetch-states.jsx)
+3. [Ejemplo de custom hook useFetch](https://github.com/nidstang/react-state-workshop/blob/main/src/examples/datafetching/useFetch.jsx)
+4. [Ejemplo de useFetch con reducer](https://github.com/nidstang/react-state-workshop/blob/main/src/examples/datafetching/reducer-useFetch.jsx)
+5. [TodosApp ejemplos (incluye ejercicio resuelto)](https://github.com/nidstang/react-state-workshop/blob/main/src/apps/TodosApp.jsx)
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+##### Ejercicios
 
-## Learn More
+1. [Ejercicio TodosApp toggleAll](https://github.com/nidstang/react-state-workshop/blob/main/src/apps/TodosAppPractice.jsx)
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
 
-### Code Splitting
+# Ejecutar el proyecto
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+Simplemente clonarse este repositorio.
 
-### Analyzing the Bundle Size
+##### Instalar dependencias
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+```bash
+npm i
+```
 
-### Making a Progressive Web App
+##### Ejecutar proyecto
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+```bash
+npm start
+```
 
-### Advanced Configuration
+Por último solo hay que ir a http://localhost:3000 para ver la aplicación
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
 
-### Deployment
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+# Problemas?
 
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Si ves que falla algo o alguna cosa no está en su sitio no dudes en contactarme por aquí o por OpenWebinars.

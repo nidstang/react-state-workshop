@@ -12,9 +12,9 @@ export default class extends React.Component {
 
     increment() {
         const { max } = this.props;
-        this.setState(count => {
-            if (count >= max) return;
-            return { count: count + 1 };
+        this.setState(state => {
+            if (state.count >= max) return;
+            return { count: state.count + 1 };
         });
     }
 

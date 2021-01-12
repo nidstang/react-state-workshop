@@ -8,10 +8,6 @@ import initialState from '../fixtures/todos';
 import { StateContext } from './context';
 import '../styles/todosApp.css';
 
-const ToggleAll = () => ({
-    type: 'TOGGLE_ALL',
-});
-
 const ToggleTodo = id => ({
     type: 'TOGGLE_TODO',
     payload: id,
@@ -30,8 +26,6 @@ const updateTodosToggle = (todo, { payload } = {}) => todo.map(todo => {
     return todo;
 });
 
-const viewTodosLength = todos => todos.filter(todo => !todo.toggled).length;
-
 
 // action = { type: ADD_TODO, payload: todo }
 const reducer = (todos = initialState(), action = {}) => {
@@ -40,8 +34,6 @@ const reducer = (todos = initialState(), action = {}) => {
             return [Object.assign({}, { ...action.payload }, { id: ids.next().value, toggled: false }), ...todos]
         case ToggleTodo().type:
             return updateTodosToggle(todos, action)
-        case ToggleAll().type:
-            return todos.map(todo => ({ ...todo, toggled: !todo.toggled }));
         default:
             return todos;
     }
@@ -58,15 +50,11 @@ export default () => {
         dispatch(ToggleTodo(id));
     }, [dispatch]);
 
-    const toggleAll = React.useCallback(() => {
-        dispatch(ToggleAll());
-    }, [dispatch]);
-
     return (
         <div class="container-todo">
             <StateContext.Provider value={[todos, dispatch]}>
                 <CreateTodo onSubmit={addTodo} />
-                <ToggleAllComponent notToggled={viewTodosLength(todos)} onClick={toggleAll} />
+                <ToggleAllComponent notToggled={0} onClick={() => null} />
                 <Todos todos={todos} onToggle={toggleTodo} />
             </StateContext.Provider>
         </div>

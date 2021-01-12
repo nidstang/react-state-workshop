@@ -1,0 +1,38 @@
+.wrapper {
+    display: grid;
+    grid-template-columns: 300px 600px;
+    grid-template-rows: auto;
+    grid-template-areas: 
+        "menu menu" 
+        "sidebar apps"
+        "credits credits";
+    justify-content: center;
+}
+
+.menu {
+    display: flex;
+    padding: 5px;
+    grid-area: menu;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid black;
+}
+
+.menu a {
+    margin: 2px;
+}
+
+.sidebar {
+    grid-area: sidebar;
+    border: 1px solid black;
+    padding: 5px;
+}
+
+.sidebar a {
+    width: 100%;
+}
+
+.apps {
+    grid-area: apps;
+    border: 1px solid black;
+}

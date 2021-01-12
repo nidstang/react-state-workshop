@@ -1,18 +1,29 @@
 import React from 'react';
-import { Switch, Route, Link } from 'react-router-dom';
+import { Switch, Route, Link, useRouteMatch, useLocation } from 'react-router-dom';
 import routes from '../routes';
+import '../styles/counterApp.css'
 
-export default () => {
+export default ({ courseType = 'basic', ...props }) => {
+    const { path, url } = useRouteMatch(); 
+
+    const courseRoutes = routes.filter(({ course, name }) => course === courseType && name);
+    const buttonClasses = 'bp3-button .modifier';
+    const location = useLocation();
+
+    const getActive = path => (location.pathname === path) ?
+        'bp3-active' : '';
+    
 
     return (
         <>
-            <h1>HII</h1>
-            <div className="links">
-                { routes.map(({ path }) => <Link to={path}>{path}</Link>)}
+            <div className="sidebar">
+                { courseRoutes.map((route) => 
+                    <Link className={`${buttonClasses} ${getActive(`${url}${route.path}`)}`} to={`${url}${route.path}`}>{route.name}</Link>
+                )}
             </div>
-            <div className="app">
+            <div className="apps">
                 <Switch>
-                    { routes.map(props => <Route {...props} />) }
+                    { courseRoutes.map(props => <Route {...props} path={`${path}${props.path}`} />) }
                 </Switch>
             </div>
         </>

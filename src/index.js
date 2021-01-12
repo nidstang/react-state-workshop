@@ -3,20 +3,20 @@ import ReactDOM from 'react-dom';
 import { Switch, BrowserRouter, Route } from 'react-router-dom';
 import routes from './routes';
 import LocalStorage from './practices/localStorage-custom-hook';
+// import '@blueprintjs/';
+import '@blueprintjs/core/lib/css/blueprint.css';
 import './index.css';
-import './styles/counterApp.css';
+// import './styles/counterApp.css';
 // import TodosApp from './apps/TodosApp';
 import Home from './apps/Home';
 import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
-  <React.StrictMode>
-    <BrowserRouter>
-      <Switch>
-        <Route path="/" exact component={Home} />
-      </Switch>
-    </BrowserRouter>
-  </React.StrictMode>,
+  <BrowserRouter>
+    <Switch>
+      <Route path="/" component={Home} />
+    </Switch>
+  </BrowserRouter>,
   document.getElementById('root')
 );
 

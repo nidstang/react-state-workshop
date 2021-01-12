@@ -6,7 +6,7 @@ export default ({
     decrement = () => null,
     reset = () => null,
 }) => (
-    <div class="container">
+    <div class="container-counter">
         <section class="counter">
             <span>{value}</span>
         </section>

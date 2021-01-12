@@ -17,7 +17,8 @@ export default (props) => {
     const [count, setCount] = React.useState(0);
 
     const increment = () => setCount(c => {
-        if (c >= props.max) return; // no funciona (para que funcione: return c;)
+        // if (c >= props.max) return; // no funciona (para que funcione: return c;)
+        if (c >= props.max) return c;
         return c + 1;
     });
     const decrement = () => setCount(dec(props));
